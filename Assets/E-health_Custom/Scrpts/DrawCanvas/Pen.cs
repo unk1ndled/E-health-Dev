@@ -5,7 +5,6 @@ using System.Linq;
 
 public class Pen : MonoBehaviour
 {
-
     [SerializeField] private Transform _tip;
     [SerializeField] private int _penSize = 5;
 
@@ -23,7 +22,9 @@ public class Pen : MonoBehaviour
     void Start()
     {
         _renderer = _tip.GetComponent<Renderer>();
-        _colors = Enumerable.Repeat(_renderer.material.color, _penSize * _penSize).ToArray();
+        // Create a fully opaque color array
+        Color penColor = new Color(_renderer.material.color.r, _renderer.material.color.g, _renderer.material.color.b, 1f);
+        _colors = Enumerable.Repeat(penColor, _penSize * _penSize).ToArray();
         _tipHeight = _tip.localScale.y;
     }
 
@@ -31,12 +32,11 @@ public class Pen : MonoBehaviour
     {
         Draw();
     }
+
     private void Draw()
     {
         if (Physics.Raycast(_tip.position, _tip.transform.up, out _touch, _tipHeight * 2))
         {
-
-
             if (_touch.transform.CompareTag("DrawingBoard"))
             {
                 if (_drawingBoard == null)
@@ -55,9 +55,10 @@ public class Pen : MonoBehaviour
 
                 if (_touchLastFrame)
                 {
+                    // Ensure the drawn pixels are fully opaque
                     _drawingBoard.texture.SetPixels(x, y, _penSize, _penSize, _colors);
 
-                    for (float f = 0.01f; f < 1.00; f += 0.05f)
+                    for (float f = 0.01f; f < 1.00f; f += 0.05f)
                     {
                         var LerpX = (int)Mathf.Lerp(_lastTouchPos.x, x, f);
                         var LerpY = (int)Mathf.Lerp(_lastTouchPos.y, y, f);
@@ -76,5 +77,3 @@ public class Pen : MonoBehaviour
         _touchLastFrame = false;
     }
 }
-
-

@@ -1186,8 +1186,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 15, y: 0.31, z: 15}
-  m_Center: {x: 0, y: -0.51, z: 0.000015258789}
+  m_Size: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+  m_Center: {x: 0, y: 0.0000076293945, z: 0}
 --- !u!23 &261804217
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1518,6 +1518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texture: {fileID: 0}
   textureSize: {x: 2048, y: 2048}
+  fillColor: {r: 0, g: 0, b: 0, a: 0.7882353}
 --- !u!1 &323906122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2415,7 @@ Transform:
   m_GameObject: {fileID: 561494507}
   serializedVersion: 2
   m_LocalRotation: {x: -0.4956171, y: 0.5043447, z: 0.50434417, w: 0.49561793}
-  m_LocalPosition: {x: 0.6819, y: 0.936, z: -0.4867}
+  m_LocalPosition: {x: 0.6702, y: 0.936, z: -0.4865}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2518,7 +2519,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AttachTransform: {fileID: 1797089427}
+  m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
@@ -8640,6 +8641,7 @@ GameObject:
   - component: {fileID: 2771305943780869539}
   - component: {fileID: 112976311398183273}
   - component: {fileID: 2771305943780869540}
+  - component: {fileID: 2771305943780869541}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -8865,8 +8867,29 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0137023665, y: 0.013702369, z: 0.07326644}
+  m_Size: {x: 0.02, y: 0.02, z: 0.07326644}
   m_Center: {x: -0.000000007450581, y: -0.000000059604645, z: 0.035856638}
+--- !u!65 &2771305943780869541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914490723739340988}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07326644, y: 0.07326644, z: 0.02}
+  m_Center: {x: 0.000000002237404, y: 2.6715272e-10, z: 0.009}
 --- !u!4 &3154726581514219159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9171031756790316709, guid: f5afcb7f49afad5419049090809f5cc7, type: 3}
