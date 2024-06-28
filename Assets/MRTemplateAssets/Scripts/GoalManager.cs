@@ -182,10 +182,10 @@ public class GoalManager : MonoBehaviour
 
         // Debug Input
 #if UNITY_EDITOR
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            CompleteGoal();
-        }
+        //if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        //{
+        //    CompleteGoal();
+        //}
 #endif
     }
 
