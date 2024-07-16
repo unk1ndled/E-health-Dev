@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c72f4e456cebb4d99b34de492de5fc, type: 3}
+  m_Name: VideoInventory
+  m_EditorClassIdentifier: 
+  inventoryItems:
+  - itemSO: {fileID: 11400000, guid: 93f9101ed87255e438aed4a236306bb5, type: 2}
+  - itemSO: {fileID: 11400000, guid: 713daec3d1a03f0418f7c3288f9b2c04, type: 2}
+  - itemSO: {fileID: 11400000, guid: a512067cd6ce3c349b67305076656938, type: 2}
+  - itemSO: {fileID: 11400000, guid: d624b7192f73be648abdf82ee1341b68, type: 2}
+  <Size>k__BackingField: 3

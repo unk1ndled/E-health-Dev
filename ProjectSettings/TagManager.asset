@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DrawingBoard
   - AttachmentPoint
+  - Actor
   layers:
   - Default
   - TransparentFX
